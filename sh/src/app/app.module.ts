@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { RouterModule } from '@angular/router';
 
 // 1. Import the libs you need
 import { AngularFireModule } from '@angular/fire';
@@ -11,19 +12,37 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderSuccessComponent } from './order-success/order-success.component';
+import { MyordersComponent } from './myorders/myorders.component';
+import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ProductsComponent,
+    ShoppingCartComponent,
+    CheckoutComponent,
+    OrderSuccessComponent,
+    MyordersComponent,
+    AdminProductsComponent,
+    AdminOrdersComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
        // 3. Initialize
        AngularFireModule.initializeApp(environment.firebase),
-       AngularFirestoreModule, // firestore
-       AngularFireAuthModule, // auth
-       AngularFireStorageModule, NgbModule // storage
+       AngularFirestoreModule,
+       AngularFireAuthModule, 
+       AngularFireStorageModule, NgbModule ,  
   ],
   providers: [],
   bootstrap: [AppComponent]

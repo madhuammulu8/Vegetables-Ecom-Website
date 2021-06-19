@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "startup-b07a1": {
+      "hosting": {
+        "sh": [
+          "startup-b07a1"
+        ]
+      }
+    }
+  }
+}
